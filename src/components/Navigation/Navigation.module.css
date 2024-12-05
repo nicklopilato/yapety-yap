@@ -1,0 +1,194 @@
+.navigation {
+  background: var(--color-bg);
+  position: fixed;
+  width: 100%;
+  z-index: 99;
+  transition: background 0.25s linear;
+  padding: 1.5rem 0;
+
+  &.noBackground {
+    background: none;
+  }
+
+  &.scrolled {
+    background-color: rgba(0,0,0,.35);
+    background-image: url("/images/dot-bg.png");
+  }
+
+  @media (orientation: landscape) and (hover: none) and (pointer: coarse) {
+    background-color: var(--black);
+    position: relative;  
+  }
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  & > svg {
+    margin: auto;
+    height: 2.5rem;
+    width: 11rem;
+
+    @media (min-width: 768px) {
+      height: 3rem;
+      width: 14rem;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    outline: 0;
+    background: none;
+
+    svg {
+      fill: var(--colors-street-lamp-yellow);
+    }
+  }
+}
+
+.navContainer {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.navItemList {
+  flex: 1;
+  align-items: center;
+  justify-content: flex-end;
+  list-style-type: none;
+  gap: var(--default-padding);
+  font-size: 0.9rem;
+  display: none;
+  width: 100%;
+
+  @media screen and (min-width: 600px) {
+    display: flex;
+  }
+}
+
+.mobileNavToggle {
+  display: block;
+  appearance: none;
+  background: none;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  color: inherit;
+
+  &:focus {
+    outline: 0;
+  }
+
+  & > .menu {
+    width: 3.5rem;
+    height: 3.5rem;
+    fill: currentColor;
+  }
+
+  &:hover > .menu {
+    color: var(--colors-street-lamp-yellow);
+  }
+
+  @media screen and (min-width: 600px) {
+    display: none;
+  }
+}
+
+.navItem {
+  text-decoration: none;
+
+  &.active {
+    color: var(--colors-street-lamp-yellow);
+  }
+}
+
+.mobileNav {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  min-height: 400px;
+  background-color: var(--color-bg);
+  background-image: url("/images/dot-bg.png");
+  z-index: 99;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  padding: calc(100px + 1rem) 2rem 8rem;
+  font-size: 3rem;
+  gap: 2rem;
+  color: var(--colors-text);
+  overflow: auto;
+  
+  > a {
+    text-decoration: none;
+  }
+}
+
+.mobileNavLogo {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  display: block;
+  color: var(--colors-text);
+
+  > .mobileSvg {
+    width: 2.5rem;
+    height: 2.5rem;
+    transform: translateY(-0.25rem);
+  }
+}
+
+.mobileNavList {
+  flex: 1;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 2rem;
+  padding: var(--default-padding);
+  
+  > a {
+    text-decoration: none;
+  }
+}
+
+.closeButton {
+  position: absolute;
+  top: 0.75rem;
+  right: 2rem;
+  appearance: none;
+  background: none;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  color: inherit;
+  font-size: 4rem;
+
+  &:focus {
+    outline: 0;
+  }
+
+  .close {
+    width: 2.5rem;
+    height: 2.5rem;
+    fill: currentColor;
+  }
+
+  &:hover .close {
+    color: var(--colors-street-lamp-yellow);
+  }
+}
+
+.navLink {
+  font-size: 1rem;
+}

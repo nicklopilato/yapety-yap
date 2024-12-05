@@ -1,0 +1,83 @@
+.footer {
+  align-items: flex-start;
+  bottom: 0;
+  display: flex;
+  flex-flow: column nowrap;
+  padding: var(--default-padding) 0;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+
+.footerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-flow: column nowrap;
+  gap: var(--default-padding);
+  padding: var(--default-padding);
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+
+  @media screen and (min-width: 600px) {
+    background-image: url("/images/dot-bg.png");
+    border-radius: 20px;
+    flex-flow: row nowrap;
+  }
+}
+
+.copyright {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  flex: 1;
+  line-height: 1.25;
+}
+
+.item {
+  color: var(--colors-text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  text-align: center;
+
+  svg {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+.logo {
+  order: 0;
+
+  @media screen and (min-width: 600px) {
+    order: 3;
+  }
+}
+
+.socialList {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  flex: 1;
+
+  @media screen and (min-width: 600px) {
+    justify-content: flex-end;
+  }
+}
+
+.socialIcon {
+  width: 1.35rem;
+  height: 1.35rem;
+}
+
+.twitterIcon {
+  width: 1rem;
+  height: 1rem;
+}
