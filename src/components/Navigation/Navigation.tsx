@@ -4,9 +4,9 @@ import classNames from "classnames";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useCallback, useEffect, useState } from "react";
-import { MobileNavigationDrawer } from "src/components/Navigation/MobileNavigationDrawer.component";
+import { MobileNavigationDrawer } from "@/components/Navigation/MobileNavigationDrawer.component";
 import styles from "src/components/Navigation/Navigation.module.css";
-import type { Page } from "src/contentful/getPages";
+import type { Page } from "@/lib/contentful/getPages";
 import AfterAvenueLogo from "src/icons/AfterAvenue.svg";
 import Menu from "src/icons/Menu.svg";
 
@@ -67,8 +67,8 @@ export const Navigation = (props: NavigationProps) => {
         <Link
           href="/"
           className={styles.logo}
-          title="Title Here"
-          aria-label="Title Here"
+          title="After Avenue"
+          aria-label="After Avenue"
         >
           <AfterAvenueLogo />
         </Link>
